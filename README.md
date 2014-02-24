@@ -16,9 +16,10 @@ Ruby on Rails Tutorial: a microblogging service
 
 In common case, to run the full test suite you should type in:
 
-    bin/rake
+    bin/bundle exec rspec spec/
 
-Since the project uses Guard to automate the running of the tests, you might want
-to run it to monitor changes in the filesystem:
+Since the project uses Guard to automate the running of the tests by monitoring
+changes in the filesystem and Spork DRb server to reduce the overhead each time
+a test gets run, start them both at the same time:
 
-    bundle exec guard
+    bin/bundle exec guard
