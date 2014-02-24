@@ -19,9 +19,12 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'guard-rspec', '~> 4.2.7'
+  gem 'childprocess', '~> 0.5.1'
+  gem 'guard-rspec',  '~> 4.2.7'
+  gem 'guard-spork',  '~> 1.5.1'
   gem 'quiet_assets', '~> 1.0.2'
-  gem 'rspec-rails', '~> 2.14.1'
+  gem 'rspec-rails',  '~> 2.14.1'
+  gem 'spork-rails',  '~> 4.0.0'
 end
 
 group :test do
