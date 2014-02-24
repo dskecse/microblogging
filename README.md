@@ -14,4 +14,11 @@ Ruby on Rails Tutorial: a microblogging service
 
 ## Testing
 
+In common case, to run the full test suite you should type in:
+
     bin/rake
+
+Since the project uses Guard to automate the running of the tests, you might want
+to run it to monitor changes in the filesystem:
+
+    bundle exec guard

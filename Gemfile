@@ -19,6 +19,7 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'guard-rspec', '~> 4.2.7'
   gem 'quiet_assets', '~> 1.0.2'
   gem 'rspec-rails', '~> 2.14.1'
 end
