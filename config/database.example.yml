@@ -1,0 +1,20 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  password:
+
+development:
+  <<: *common
+  database: microblogging_development
+  username: microblogging
+
+test:
+  <<: *common
+  database: microblogging_test
+  username: microblogging
+
+production:
+  <<: *common
+  database: microblogging_production
+  password:
