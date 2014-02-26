@@ -28,5 +28,11 @@ module Microblogging
 
     # Precompile images for Bootstrap-Sass gem
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    # Configure generators
+    config.generators do |g|
+      g.assets false
+      g.helper false
+    end
   end
 end
