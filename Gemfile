@@ -33,6 +33,7 @@ group :test do
   gem 'capybara', '~> 2.2.0'
   gem 'selenium-webdriver', '~> 2.39.0'
   gem 'database_cleaner', '~> 1.2.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 group :production do
