@@ -1,0 +1,10 @@
+- provide(:title, 'Edit user')
+
+h1 Update your profile
+
+.row
+  .span6.offset3
+    = render 'form'
+
+    = gravatar_for @user
+    = link_to 'change', 'http://gravatar.com/emails'
