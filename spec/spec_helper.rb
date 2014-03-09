@@ -52,6 +52,9 @@ Spork.prefork do
     end
 
     config.include Capybara::DSL
+
+    config.include AuthenticationHelpers
+    config.include CustomMatchers
   end
 end
 
