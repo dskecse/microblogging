@@ -43,4 +43,22 @@ describe 'Authentication' do
       end
     end
   end
+
+  describe 'authorization' do
+    context 'for non-signed-in users' do
+      let(:user) { FactoryGirl.create(:user) }
+
+      context 'visiting the user edit page' do
+        before { visit edit_user_path(user) }
+
+        it { should have_title('Sign in') }
+      end
+
+      context 'submitting to the user update action' do
+        before { patch user_path(user) }
+
+        specify { expect(response).to redirect_to(signin_path) }
+      end
+    end
+  end
 end
