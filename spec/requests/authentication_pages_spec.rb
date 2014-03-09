@@ -48,6 +48,21 @@ describe 'Authentication' do
     context 'for non-signed-in users' do
       let(:user) { FactoryGirl.create(:user) }
 
+      context 'when attempting to visit a protected page' do
+        before do
+          visit edit_user_path(user)
+          fill_in 'Email',    with: user.email
+          fill_in 'Password', with: user.password
+          click_button 'Sign in'
+        end
+
+        describe 'after signing in' do
+          it 'renders the desired protected page' do
+            expect(page).to have_title('Edit user')
+          end
+        end
+      end
+
       context 'visiting the user edit page' do
         before { visit edit_user_path(user) }
 
