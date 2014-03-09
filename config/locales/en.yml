@@ -2,7 +2,7 @@ en:
   helpers:
     label:
       user:
-        password_confirmation: 'Confirm'
+        password_confirmation: 'Confirmation'
     submit:
       user:
         create: 'Create account'
