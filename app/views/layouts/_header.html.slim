@@ -6,7 +6,7 @@ header.navbar.navbar-fixed-top.navbar-inverse
         li= link_to 'Home', root_path
         li= link_to 'Help', help_path
         - if signed_in?
-          li= link_to 'Users', '#'
+          li= link_to 'Users', users_path
           li#fat-menu.dropdown
             = link_to '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | Account #{ content_tag(:b, nil, class: 'caret') }
