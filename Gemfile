@@ -16,6 +16,8 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'slim-rails', '~> 2.1.0'
 gem 'thin', '~> 1.6.1'
 gem 'turbolinks', '~> 2.2.1'
+gem 'will_paginate', '~> 3.0.5'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 group :doc do
   gem 'yard', '~> 0.8.7'
