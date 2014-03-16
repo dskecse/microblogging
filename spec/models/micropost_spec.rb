@@ -18,4 +18,16 @@ describe Micropost do
 
     it { should_not be_valid }
   end
+
+  describe 'with blank content' do
+    before { @micropost.content = ' ' }
+
+    it { should_not be_valid }
+  end
+
+  describe 'with content is too long' do
+    before { @micropost.content = 'a' * 141 }
+
+    it { should_not be_valid }
+  end
 end
