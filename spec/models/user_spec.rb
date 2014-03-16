@@ -134,5 +134,16 @@ describe User do
     it 'has microposts in the right order' do
       expect(@user.microposts.to_a).to eq [newer_micropost, older_micropost]
     end
+
+    it 'destroys associated microposts' do
+      microposts = @user.microposts.to_a
+      @user.destroy
+      expect(microposts).not_to be_empty
+      microposts.each do |micropost|
+        expect do
+          Micropost.find(micropost.id)
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
   end
 end

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
 
   before_save { email.downcase! }
   before_create :create_remember_token
