@@ -33,7 +33,7 @@ describe 'MicropostPages' do
   describe 'micropost destruction' do
     before { FactoryGirl.create(:micropost, user: user) }
 
-    content 'as a correct user' do
+    context 'as a correct user' do
       before { visit root_path }
 
       it 'deletes a micropost' do
