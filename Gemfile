@@ -32,6 +32,10 @@ group :development, :test do
   gem 'spork-rails',  '~> 4.0.0'
 end
 
+group :development do
+  gem 'bullet', '~> 4.8.0'
+end
+
 group :test do
   gem 'capybara', '~> 2.2.0'
   gem 'cucumber-rails', '~> 1.4.0', require: false
