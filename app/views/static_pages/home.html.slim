@@ -1,9 +1,17 @@
-.center.hero-unit
-  h1 Welcome to the Sample App
-  h2
-    ' This is the home page for the
-    | #{ link_to 'Ruby on Rails Tutorial', 'http://railstutorial.org' } sample application.
+- if signed_in?
+  .row
+    aside.span4
+      section
+        = render 'shared/user_info'
+      section
+        = render 'shared/micropost_form'
+- else
+  .center.hero-unit
+    h1 Welcome to the Sample App
+    h2
+      ' This is the home page for the
+      | #{ link_to 'Ruby on Rails Tutorial', 'http://railstutorial.org' } sample application.
 
-  = link_to 'Sign up now!', signup_path, class: 'btn btn-large btn-primary'
+    = link_to 'Sign up now!', signup_path, class: 'btn btn-large btn-primary'
 
-= link_to image_tag('rails.png', alt: 'Rails'), 'http://rubyonrails.org/'
+  = link_to image_tag('rails.png', alt: 'Rails'), 'http://rubyonrails.org/'
