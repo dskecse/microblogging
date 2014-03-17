@@ -29,4 +29,16 @@ describe 'MicropostPages' do
       end
     end
   end
+
+  describe 'micropost destruction' do
+    before { FactoryGirl.create(:micropost, user: user) }
+
+    content 'as a correct user' do
+      before { visit root_path }
+
+      it 'deletes a micropost' do
+        expect { click_link 'delete' }.to change(Micropost, :count).by(-1)
+      end
+    end
+  end
 end
