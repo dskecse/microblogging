@@ -1,4 +1,4 @@
-span.content= post.content
+span.content= wrap(post.content)
 span.timestamp
   ' Posted #{ time_ago_in_words(post.created_at) } ago.
 - if current_user?(post.user)
