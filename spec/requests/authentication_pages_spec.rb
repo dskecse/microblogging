@@ -27,7 +27,7 @@ describe 'Authentication' do
     end
 
     context 'with valid information' do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { create(:user) }
       before { valid_signin(user) }
 
       it { should have_title(user.name) }
@@ -47,7 +47,7 @@ describe 'Authentication' do
 
   describe 'authorization' do
     context 'for non-signed-in users' do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { create(:user) }
 
       context 'when attempting to visit a protected page' do
         before do
@@ -72,7 +72,7 @@ describe 'Authentication' do
         end
 
         describe 'submitting to the destroy action' do
-          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          before { delete micropost_path(create(:micropost)) }
 
           specify { expect(response).to redirect_to(signin_path) }
         end
@@ -124,8 +124,8 @@ describe 'Authentication' do
     end
 
     context 'for wrong users' do
-      let(:user) { FactoryGirl.create(:user) }
-      let(:wrong_user) { FactoryGirl.create(:user, email: 'wrong@example.org') }
+      let(:user) { create(:user) }
+      let(:wrong_user) { create(:user, email: 'wrong@example.org') }
       before { valid_signin user, no_capybara: true }
 
       describe 'submitting a GET request to the edit action' do

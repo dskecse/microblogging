@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'MicropostPages' do
   subject { page }
 
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { create(:user) }
   before { valid_signin user }
 
   describe 'micropost creation' do
@@ -31,7 +31,7 @@ describe 'MicropostPages' do
   end
 
   describe 'micropost destruction' do
-    before { FactoryGirl.create(:micropost, user: user) }
+    before { create(:micropost, user: user) }
 
     context 'as a correct user' do
       before { visit root_path }

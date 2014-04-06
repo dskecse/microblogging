@@ -12,10 +12,10 @@ describe 'Static pages' do
     it { should_not have_title('| Home') }
 
     context 'for signed-in users' do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { create(:user) }
       before do
-        FactoryGirl.create(:micropost, user: user, content: 'Lorem ipsum')
-        FactoryGirl.create(:micropost, user: user, content: 'Dolor sit amet')
+        create(:micropost, user: user, content: 'Lorem ipsum')
+        create(:micropost, user: user, content: 'Dolor sit amet')
         valid_signin user
         visit root_path
       end
@@ -27,7 +27,7 @@ describe 'Static pages' do
       end
 
       describe 'follower/following counts' do
-        let(:other_user) { FactoryGirl.create(:user) }
+        let(:other_user) { create(:user) }
         before do
           other_user.follow!(user)
           visit root_path

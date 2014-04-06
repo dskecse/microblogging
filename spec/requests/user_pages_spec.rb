@@ -4,7 +4,7 @@ describe 'UserPages' do
   subject { page }
 
   describe 'index' do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { create(:user) }
     before do
       valid_signin user
       visit users_path
@@ -14,7 +14,7 @@ describe 'UserPages' do
     it { should have_content('All users') }
 
     describe 'pagination' do
-      before(:all) { 30.times { FactoryGirl.create(:user) } }
+      before(:all) { 30.times { create(:user) } }
       after(:all)  { User.delete_all }
 
       it { should have_selector('div.pagination') }
@@ -30,7 +30,7 @@ describe 'UserPages' do
       it { should_not have_link('delete') }
 
       context 'as an admin user' do
-        let(:admin) { FactoryGirl.create(:admin) }
+        let(:admin) { create(:admin) }
         before do
           valid_signin admin
           visit users_path
@@ -46,8 +46,8 @@ describe 'UserPages' do
       end
 
       context 'as a non-admin user' do
-        let(:user) { FactoryGirl.create(:user) }
-        let(:non_admin) { FactoryGirl.create(:user) }
+        let(:user) { create(:user) }
+        let(:non_admin) { create(:user) }
 
         before { valid_signin non_admin, no_capybara: true }
 
@@ -61,9 +61,9 @@ describe 'UserPages' do
   end
 
   describe 'profile page' do
-    let(:user) { FactoryGirl.create(:user) }
-    let!(:m1)  { FactoryGirl.create(:micropost, user: user, content: 'Foo') }
-    let!(:m2)  { FactoryGirl.create(:micropost, user: user, content: 'Bar') }
+    let(:user) { create(:user) }
+    let!(:m1)  { create(:micropost, user: user, content: 'Foo') }
+    let!(:m2)  { create(:micropost, user: user, content: 'Bar') }
 
     before { visit user_path(user) }
 
@@ -77,7 +77,7 @@ describe 'UserPages' do
     end
 
     describe 'follow/unfollow buttons' do
-      let(:other_user) { FactoryGirl.create(:user) }
+      let(:other_user) { create(:user) }
       before { valid_signin user }
 
       context 'following a user' do
@@ -170,7 +170,7 @@ describe 'UserPages' do
   end
 
   describe 'edit' do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { create(:user) }
     before do
       valid_signin user
       visit edit_user_path(user)
@@ -221,8 +221,8 @@ describe 'UserPages' do
   end
 
   describe 'following/followers' do
-    let(:user) { FactoryGirl.create(:user) }
-    let(:other_user) { FactoryGirl.create(:user) }
+    let(:user) { create(:user) }
+    let(:other_user) { create(:user) }
     before { user.follow!(other_user) }
 
     describe 'followed users' do

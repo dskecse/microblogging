@@ -4,7 +4,7 @@ describe UsersController do
   describe 'GET new' do
     context 'when signed in' do
       before do
-        valid_signin FactoryGirl.create(:user), no_capybara: true
+        valid_signin create(:user), no_capybara: true
       end
 
       it 'redirects to root_url' do
@@ -17,7 +17,7 @@ describe UsersController do
   describe 'POST create' do
     context 'when signed in' do
       before do
-        valid_signin FactoryGirl.create(:user), no_capybara: true
+        valid_signin create(:user), no_capybara: true
       end
 
       it 'redirects to root_url' do

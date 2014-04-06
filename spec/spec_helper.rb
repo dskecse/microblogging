@@ -44,6 +44,7 @@ Spork.prefork do
     config.order = "random"
 
     config.include Capybara::DSL
+    config.include FactoryGirl::Syntax::Methods
 
     config.include AuthenticationHelpers
     config.include CustomMatchers
