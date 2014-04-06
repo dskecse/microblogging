@@ -8,5 +8,11 @@ FactoryGirl.define do
     factory :admin do
       admin true
     end
+
+    trait :with_microposts do
+      after(:build) do |user|
+        create_list(:micropost, 3, user: user)
+      end
+    end
   end
 end
