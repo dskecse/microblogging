@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.0'
 gem 'pg', '0.17.1'
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'faker', '~> 1.3.0'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '~> 2.4.0'
 
 gem 'jquery-rails', '~> 3.1.0'
-gem 'slim-rails', '~> 2.1.0'
+gem 'slim-rails', '~> 2.1.4'
 gem 'thin', '~> 1.6.1'
 gem 'turbolinks', '~> 2.2.1'
 gem 'will_paginate', '~> 3.0.5'
