@@ -1,5 +1,7 @@
 # Microblogging
 
+[![Codeship Status for dskecse/microblogging](https://www.codeship.io/projects/1600f5f0-2b5a-0132-86cb-063c86de0b48/status)](https://www.codeship.io/projects/38526)
+
 Ruby on Rails Tutorial: a microblogging service
 
 ## Installation
