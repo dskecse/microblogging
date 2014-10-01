@@ -13,11 +13,7 @@ describe Micropost do
 
   it { should be_valid }
 
-  describe 'when user_id is not present' do
-    before { @micropost.user_id = nil }
-
-    it { should_not be_valid }
-  end
+  it { should validate_presence_of :user }
 
   describe 'with blank content' do
     before { @micropost.content = ' ' }

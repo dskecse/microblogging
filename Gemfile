@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.3'
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.6'
 gem 'pg', '0.17.1'
 
 gem 'bcrypt'
@@ -42,6 +42,7 @@ group :test do
   gem 'selenium-webdriver', '~> 2.39.0'
   gem 'database_cleaner', '~> 1.2.0'
   gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'shoulda-matchers', require: false
 end
 
 group :production do
