@@ -34,7 +34,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'bullet', '~> 4.8.0'
+  gem 'bullet', '~> 4.14.0'
 end
 
 group :test do
