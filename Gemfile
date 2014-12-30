@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.4'
 
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.0'
 gem 'pg', '0.17.1'
 
 gem 'bcrypt'
@@ -13,7 +13,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '~> 2.4.0'
 
 gem 'jquery-rails', '~> 3.1.0'
-gem 'slim-rails', '~> 2.1.4'
+gem 'slim-rails', '~> 3.0.1'
 gem 'thin', '~> 1.6.1'
 gem 'turbolinks', '~> 2.2.1'
 gem 'will_paginate', '~> 3.0.5'
