@@ -1,0 +1,28 @@
+{
+  "name": "microblogging",
+  "description": "Ruby on Rails Tutorial: a microblogging service",
+  "scripts": {
+  },
+  "env": {
+    "HEROKU_POSTGRESQL_ORANGE_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+
+  ]
+}
