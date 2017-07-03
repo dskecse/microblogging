@@ -11,7 +11,7 @@ User.create!(name: 'Example User',
                password_confirmation: 'password')
 end
 
-users = User.all(limit: 6)
+users = User.limit(6)
 50.times do
   users.each do |user|
     user.microposts.create!(content: Faker::Lorem.sentence)
