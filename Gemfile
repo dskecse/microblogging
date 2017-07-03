@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.9'
 gem 'pg', '0.17.1'
 
 gem 'bcrypt'
@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 2.2.1'
 gem 'will_paginate', '~> 3.0.5'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'responders', '~> 2.0'
+gem 'rake', '10.4.2'
 
 group :doc do
   gem 'yard', '~> 0.8.7'
